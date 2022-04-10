@@ -1,7 +1,7 @@
-(Work-in-progress) april
+april
 ========================
 
-**A lightweight Python package to access and interact with ZTF light curve data**
+**(Work-in-progress) A lightweight Python package to access and interact with ZTF light curve data**
 
 
 License
