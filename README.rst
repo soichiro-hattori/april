@@ -1,5 +1,5 @@
-april
-========================
+theiform
+========
 
 **(Work-in-progress) A lightweight Python package to access and interact with ZTF light curve data**
 
@@ -9,5 +9,5 @@ License
 
 Copyright 2022 Soichiro Hattori
 
-april is free software made available under the MIT License. For details see
+theiform is free software made available under the MIT License. For details see
 the LICENSE file.
