@@ -1,13 +1,16 @@
-import os
+#!/usr/bin/env python
 
 from setuptools import find_packages, setup
 
+exec(open("src/theiform/_version.py").read())
+
 setup(
     name="theiform",
-    version="0.1.0",
+    version=__version__, 
     author="Soichiro Hattori",
     author_email="soichiro.hattori@gmail.com",
-    packages=find_packages(),
+    packages=find_packages(where="src"),
+    package_dir={"": "src"},
     license="MIT",
     description="A lightweight Python package to download and interact with ZTF light curve data",
     long_description=open("README.rst").read(),
