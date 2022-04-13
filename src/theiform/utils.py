@@ -8,7 +8,7 @@ from astropy.timeseries import TimeSeries, aggregate_downsample
 from astropy.time import Time
 import astropy.units as u
 
-data_dir = '/home/soichiro/'
+data_dir = '/home/soichiro/LongRotators/ZTF_data'
 
 # Functions for ZTF
 def to_ztf_lc(time, mag, magerr=None, time_col_name='mjd', time_col_format='mjd'):
@@ -69,13 +69,15 @@ def insert_tess_time_column(lc, index=None, name='tess_time'):
     return lc
 
 
-def add_flux_column(lc, name='flux', mag_zp=0):
+def add_flux_column(lc, name='flux', mag_zp=26.275):
     """
     Add a column that converts the recorded ZTF magnitude to (relative) flux.
+    mag_zp is currently set to 26.275 based on Table 5 column (9) from https://iopscience.iop.org/article/10.3847/1538-4357/ab4cf5
+
     """
     
     mag = lc['mag'].value
-    exponent = (mag_zp-mag) / 2.0
+    exponent = (mag_zp-mag) / 2.5
     flux = 10**exponent
     index = lc.colnames.index('magerr')+1
     lc.add_column(flux, index=index, name=name)
