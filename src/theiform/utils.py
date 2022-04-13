@@ -7,12 +7,6 @@ from astropy.table import Table, unique
 from astropy.timeseries import TimeSeries, aggregate_downsample
 from astropy.time import Time
 import astropy.units as u
-# import lightkurve as lk
-# import pickle
-# import scipy.signal
-# from astropy.timeseries import LombScargle, TimeSeries, aggregate_downsample
-# from itertools import compress
-# from tqdm import tqdm
 
 data_dir = '/home/soichiro/'
 
