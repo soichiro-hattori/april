@@ -6,7 +6,7 @@ exec(open("src/theiform/_version.py").read())
 
 setup(
     name="theiform",
-    version=__version__, 
+    version=__version__,  # type: ignore
     author="Soichiro Hattori",
     author_email="soichiro.hattori@gmail.com",
     packages=find_packages(where="src"),
