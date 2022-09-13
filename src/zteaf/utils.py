@@ -94,7 +94,7 @@ def add_flux_column(lc, name="flux", mag_zp=26.275):
     mag_zp is currently set to 26.275 based on Table 5 column (9) from https://iopscience.iop.org/article/10.3847/1538-4357/ab4cf5
 
     """
-
+    lc = lc.copy()
     mag = lc["mag"].value
     exponent = (mag_zp - mag) / 2.5
     flux = 10**exponent

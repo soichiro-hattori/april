@@ -1,4 +1,4 @@
-theiform
+zteaf
 ========
 
 **(Not ready for use) A lightweight Python package to access and interact with ZTF light curve data**
